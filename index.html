@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat web app</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    
 </head>
 
-<body>
-    <main class="w-100% flex flex-row">
+<body class="">
+    
+    <main class="w-100% h-100vh flex flex-row">
         <!-- sidebar -->
-        <section class="w-[105px] h-auto flex flex-col justify-between items-center p-4 shadow-lg">
+        <section class="w-[105px] h-screen flex flex-col justify-between items-center p-4 shadow-lg">
             <div class="flex-col justify-between items-center">
                 <div class="">
                     <img src="./images/img1/Logo.png" alt="" class="w-16">
                 </div>
-                <div class="flex flex-col justify-center items-center gap-8 mt-16">
-                    <img src="./images/img1/home.png" alt="" class="w-7 h-7">
-                    <img src="./images/img1/message.png" alt="" class="w-7 h-7">
-                    <img src="./images/img1/more.png" alt="" class="w-7 h-7">
-                    <img src="./images/img1/search.png" alt="" class="w-7 h-7">
-                    <img src="./images/img1/box.png" alt="" class="w-7 h-7">
+                <div class="flex flex-col justify-center items-center gap-4 mt-10">
+                    <img src="./images/img1/home.png" alt="" class="w-12 h-12 p-2 hover:bg-[#F6F6FE] rounded-full">
+                    <img src="./images/img1/message.png" alt="" class="w-12 h-12 p-2 hover:bg-[#F6F6FE] rounded-full">
+                    <img src="./images/img1/more.png" alt="" class="w-12 h-12 p-2 hover:bg-[#F6F6FE] rounded-full">
+                    <img src="./images/img1/search.png" alt="" class="w-12 h-12 p-2 hover:bg-[#F6F6FE] rounded-xl">
+                    <img src="./images/img1/box.png" alt="" class="w-12 h-12 p-2 hover:bg-[#F6F6FE] rounded-full">
                 </div>
             </div>
             <div class="pb-2">
@@ -29,7 +33,7 @@
             </div>
         </section>
         <!-- massage section -->
-        <section class="flex flex-col w-[412px] h-auto">
+        <section class="flex flex-col w-[412px] h-screen">
             <!-- messages header -->
             <div class="flex flex-row justify-between items-center px-6">
                 <div class="flex flex-row gap-3 justify-center items-center h-28">
@@ -43,140 +47,146 @@
             </div>
             <hr>
             <!-- all id -->
-            <div class="flex flex-col items-center pt-3">
-                <!-- search here -->
-                <button class="bg-[#f3f3f3] text-[#929292] text-left font-normal p-4 rounded-xl w-[370px]">
-                    search Search messages
-                </button>
-            </div>
-            <!-- 1st id -->
-            <div class="px-8 py-6">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame1.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Elmer Laverty</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">Haha oh man</p>
-                                <img src="./images/img2/fire.png" alt="" class="w-4 h-4">
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">Question
-                                </p>
-                                <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">Help
-                                    wanted</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-[#929292] text-base font-medium">12m</p>
+            <div class="overflow-hidden overflow-y-auto">
+                <div class="flex flex-col items-center pt-3">
+                    <!-- search here -->
+                    <button class="bg-[#f3f3f3] text-[#929292] text-left font-normal p-4 rounded-xl w-[360px]">
+                        search Search messages
+                    </button>
                 </div>
-            </div>
-            <!-- 2nd id -->
-            <div class="px-4 py-3 bg-[#f6f6fe] mx-4 rounded-xl">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame2.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Florencio Dorrance</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">woohoooo</p>
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p
-                                    class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
-                                    Some content</p>
+                <!-- 1st id -->
+                <div class="px-4 py-3 m-4 hover:bg-[#f6f6fe] rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame1.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Elmer Laverty</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">Haha oh man</p>
+                                    <img src="./images/img2/fire.png" alt="" class="w-4 h-4">
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">
+                                        Question
+                                    </p>
+                                    <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">Help
+                                        wanted</p>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-[#929292] text-base font-medium">12m</p>
                     </div>
-                    <p class="text-[#929292] text-base font-medium">24m</p>
                 </div>
-            </div>
-            <!-- 3rd id -->
-            <div class="px-8 py-6">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame3.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Lavern Laboy</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">Haha that's terrifying</p>
-                                <img src="./images/img2/laugh.png" alt="" class="w-4 h-4">
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">Bug</p>
-                                <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">
-                                    Hacktoberfest</p>
+                <!-- 2nd id -->
+                <div class="px-4 py-3 bg-[#f6f6fe] mx-4 rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame2.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Florencio Dorrance</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">woohoooo</p>
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p
+                                        class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
+                                        Some content</p>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-[#929292] text-base font-medium">24m</p>
                     </div>
-                    <p class="text-[#929292] text-base font-medium">1h</p>
                 </div>
-            </div>
-            <!-- 4th id -->
-            <div class="px-8 py-6">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame4.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Titus Kitamura</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">omg, this is amazing</p>
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">Question
-                                </p>
-                                <p
-                                    class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
-                                    Some content</p>
+                <!-- 3rd id -->
+                <div class="px-4 py-3 m-4 hover:bg-[#f6f6fe] rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame3.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Lavern Laboy</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">Haha that's terrifying</p>
+                                    <img src="./images/img2/laugh.png" alt="" class="w-4 h-4">
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">Bug
+                                    </p>
+                                    <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">
+                                        Hacktoberfest</p>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-[#929292] text-base font-medium">1h</p>
                     </div>
-                    <p class="text-[#929292] text-base font-medium">5h</p>
                 </div>
-            </div>
-            <!-- 5th id -->
-            <div class="px-8 py-6">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame5.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Geoffrey Mott</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">aww</p>
-                                <img src="./images/img2/love.png" alt="" class="w-4 h-4">
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">Request
-                                </p>
+                <!-- 4th id -->
+                <div class="px-4 py-3 m-4 hover:bg-[#f6f6fe] rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame4.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Titus Kitamura</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">omg, this is amazing</p>
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p class="bg-[#feebc8] px-2 py-1 rounded-full text-[#dd6b20] text-sm font-bold">
+                                        Question
+                                    </p>
+                                    <p
+                                        class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
+                                        Some content</p>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-[#929292] text-base font-medium">5h</p>
                     </div>
-                    <p class="text-[#929292] text-base font-medium">2d</p>
                 </div>
-            </div>
-            <!-- 6th id -->
-            <div class="px-8 py-6">
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-row gap-4">
-                        <img src="./images/img2/Frame6.png" alt="" class="w-14 h-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-bold">Alfonzo Schuessler</h3>
-                            <div class="flex flex-row gap-2">
-                                <p class="text-[#929292] font-semibold text-sm">perfect!</p>
-                            </div>
-                            <div class="flex flex-row gap-3 mt-2">
-                                <p
-                                    class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
-                                    Follow up</p>
+                <!-- 5th id -->
+                <div class="px-4 py-3 m-4 hover:bg-[#f6f6fe] rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame5.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Geoffrey Mott</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">aww</p>
+                                    <img src="./images/img2/love.png" alt="" class="w-4 h-4">
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p class="bg-[#c6f6d5] px-2 py-1 rounded-full text-[#38a169] text-sm font-bold">
+                                        Request
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-[#929292] text-base font-medium">2d</p>
                     </div>
-                    <p class="text-[#929292] text-base font-medium">12m</p>
+                </div>
+                <!-- 6th id -->
+                <div class="px-4 py-3 m-4 hover:bg-[#f6f6fe] rounded-xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="./images/img2/Frame6.png" alt="" class="w-14 h-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Alfonzo Schuessler</h3>
+                                <div class="flex flex-row gap-2">
+                                    <p class="text-[#929292] font-semibold text-sm">perfect!</p>
+                                </div>
+                                <div class="flex flex-row gap-3 mt-2">
+                                    <p
+                                        class="border-2 border-gray-300  px-2 py-0.5 rounded-full text-[#718096] text-sm font-bold">
+                                        Follow up</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[#929292] text-base font-medium">12m</p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- chat section -->
-        <section class="relative flex flex-col w-[755px] h-auto border-l-2 pb-20">
+        <section class="relative flex flex-col w-[755px] h-screen border-l-2">
             <!--  -->
             <div class="">
                 <!-- right header -->
@@ -201,8 +211,7 @@
                 </div>
                 <hr class="">
                 <!-- <div class="z-20 absolute "> -->
-                    <!--if overflow-y-scroll -->
-                <div class=" w-[750px] h-[900px] flex flex-col pl-20 pr-20">
+                <div class="overflow-hidden overflow-y-auto w-[750px] h-screen flex flex-col px-20">
                     <div class="relative bg-[#F1f1f1] ml-2 mt-4 rounded-lg w-[170px] self-start">
                         <p class="p-2 text-[#1e1e1e] font-medium">omg, this id amazing</p>
                         <img src="./images/img3/Frame2.png" alt="" class="absolute -left-16 top-0 w-10 h-10">
@@ -248,6 +257,22 @@
                         <p class="p-2 text-[#1e1e1e] font-medium">perfect!</p>
                         <img src="./images/img3/fire.png" alt="" class="absolute right-2 top-2 w-5 h-5">
                     </div>
+                    <div class="relative bg-[#F1f1f1] m-2 rounded-lg w-[100px] self-start">
+                        <p class="p-2 text-[#1e1e1e] font-medium">perfect!</p>
+                        <img src="./images/img3/fire.png" alt="" class="absolute right-2 top-2 w-5 h-5">
+                    </div>
+                    <div class="relative bg-[#F1f1f1] m-2 rounded-lg w-[100px] self-start">
+                        <p class="p-2 text-[#1e1e1e] font-medium">perfect!</p>
+                        <img src="./images/img3/fire.png" alt="" class="absolute right-2 top-2 w-5 h-5">
+                    </div>
+                    <div class="relative bg-[#F1f1f1] m-2 rounded-lg w-[100px] self-start">
+                        <p class="p-2 text-[#1e1e1e] font-medium">perfect!</p>
+                        <img src="./images/img3/fire.png" alt="" class="absolute right-2 top-2 w-5 h-5">
+                    </div>
+                    <div class="relative bg-[#F1f1f1] m-2 rounded-lg w-[100px] self-start">
+                        <p class="p-2 text-[#1e1e1e] font-medium">perfect!</p>
+                        <img src="./images/img3/fire.png" alt="" class="absolute right-2 top-2 w-5 h-5">
+                    </div>
                 </div>
             </div>
             </div>
@@ -261,10 +286,10 @@
                         <img src="./images/img3/victor1.png" alt="" class="w-8 h-8 ml-4 cursor-pointer">
                     </div>
                 </div>
-            </div>   
+            </div>
         </section>
         <!-- directory section -->
-        <section class="w-[435px] h-auto border border-yellow-600">
+        <section class="w-[420px] h-screen border border-yellow-600">
             <!-- header -->
             <div class="flex flex-row justify-between items-center px-6">
                 <div class="flex flex-row gap-3 justify-center items-center h-24">
@@ -273,117 +298,119 @@
                 <div class="">
                     <img src="./images/img4/more.png" alt="" class="w-10 h-10">
                 </div>
-            </div> 
-            <hr class="">
-            <!-- team members -->
-            <div class="mt-5 mx-3">
-                <div class="flex flex-row gap-3">
-                    <h3 class="text-lg font-medium">Team Members</h3>
-                    <p class="bg-[#edf2f7] px-2 rounded-full font-semibold">6</p>
-                </div>
-                <!-- members -->
-                <div class="">
-                    <!-- members1 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame1.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Florencio Dorrance</h3>
-                            <p class="text-[#989898] font-medium">Marker Development Manager</p>
-                        </div>
-                    </div>
-                    <!-- members2 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame2.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Benny Spanbauer</h3>
-                            <p class="text-[#989898] font-medium">Area Sales Manager</p>
-                        </div>
-                    </div>
-                    <!-- members3 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame3.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Jamel Eusebio</h3>
-                            <p class="text-[#989898] font-medium">Administrator</p>
-                        </div>
-                    </div>
-                    <!-- members4 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame4.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Lavern Laboy</h3>
-                            <p class="text-[#989898] font-medium">Account Executive</p>
-                        </div>
-                    </div>
-                    <!-- members5 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame5.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Alfonzo Schuessler</h3>
-                            <p class="text-[#989898] font-medium">Proposal Writer</p>
-                        </div>
-                    </div>
-                    <!-- members6 -->
-                    <div class="flex flex-row gap-5 pl-3 py-5">
-                        <img src="./images/img4/Frame6.png" alt="" class="w-14">
-                        <div class="flex flex-col">
-                            <h3 class="text-xl font-semibold">Darul Nehls</h3>
-                            <p class="text-[#989898] font-medium">Nursing Assisant</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <hr class="mt-9">
-            <div class="mt-5 mx-3">
-                <div class="flex flex-row gap-3">
-                    <h3 class="text-lg font-medium">Files</h3>
-                    <p class="bg-[#edf2f7] px-2 rounded-full font-semibold">125</p>
+            <hr class="">
+            <div class="overflow-hidden overflow-y-auto h-[calc(100-88)]">
+                <!-- team members -->
+                <div class="mt-5 mx-3">
+                    <div class="flex flex-row gap-3">
+                        <h3 class="text-lg font-medium">Team Members</h3>
+                        <p class="bg-[#edf2f7] px-2 rounded-full font-semibold">6</p>
+                    </div>
+                    <!-- members -->
+                    <div class="">
+                        <!-- members1 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame1.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Florencio Dorrance</h3>
+                                <p class="text-[#989898] font-medium">Marker Development Manager</p>
+                            </div>
+                        </div>
+                        <!-- members2 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame2.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Benny Spanbauer</h3>
+                                <p class="text-[#989898] font-medium">Area Sales Manager</p>
+                            </div>
+                        </div>
+                        <!-- members3 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame3.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Jamel Eusebio</h3>
+                                <p class="text-[#989898] font-medium">Administrator</p>
+                            </div>
+                        </div>
+                        <!-- members4 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame4.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Lavern Laboy</h3>
+                                <p class="text-[#989898] font-medium">Account Executive</p>
+                            </div>
+                        </div>
+                        <!-- members5 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame5.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Alfonzo Schuessler</h3>
+                                <p class="text-[#989898] font-medium">Proposal Writer</p>
+                            </div>
+                        </div>
+                        <!-- members6 -->
+                        <div class="flex flex-row gap-5 pl-3 py-5">
+                            <img src="./images/img4/Frame6.png" alt="" class="w-14">
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-semibold">Darul Nehls</h3>
+                                <p class="text-[#989898] font-medium">Nursing Assisant</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- files -->
-                <div class="">
-                    <!-- file-1 -->
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row gap-5 pl-3 py-5">
-                            <img src="./images/img4/file1.png" alt="" class="w-14">
-                            <div class="flex flex-col">
-                                <h3 class="text-xl font-semibold">i9.pdf</h3>
-                                <p class="text-[#989898] font-medium">PDF 9mb</p>
-                            </div>
-                        </div>
-                        <img src="./images/img4/down.png" alt="" class="w-9 h-9">
+                <hr class="mt-9">
+                <div class="mt-5 mx-3">
+                    <div class="flex flex-row gap-3">
+                        <h3 class="text-lg font-medium">Files</h3>
+                        <p class="bg-[#edf2f7] px-2 rounded-full font-semibold">125</p>
                     </div>
-                    <!-- members2 -->
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row gap-5 pl-3 py-5">
-                            <img src="./images/img4/file2.png" alt="" class="w-14">
-                            <div class="flex flex-col">
-                                <h3 class="text-xl font-semibold">Screenshot-3817.png</h3>
-                                <p class="text-[#989898] font-medium">PNG 4mb</p>
+                    <!-- files -->
+                    <div class="">
+                        <!-- file-1 -->
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-row gap-5 pl-3 py-5">
+                                <img src="./images/img4/file1.png" alt="" class="w-14">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-semibold">i9.pdf</h3>
+                                    <p class="text-[#989898] font-medium">PDF 9mb</p>
+                                </div>
                             </div>
+                            <img src="./images/img4/down.png" alt="" class="w-9 h-9">
                         </div>
-                        <img src="./images/img4/down.png" alt="" class="w-9 h-9">
-                    </div>
-                    <!-- members3 -->
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row gap-5 pl-3 py-5">
-                            <img src="./images/img4/file3.png" alt="" class="w-14">
-                            <div class="flex flex-col">
-                                <h3 class="text-xl font-semibold">sharefile.docx</h3>
-                                <p class="text-[#989898] font-medium">DOC 555kb</p>
+                        <!-- members2 -->
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-row gap-5 pl-3 py-5">
+                                <img src="./images/img4/file2.png" alt="" class="w-14">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-semibold">Screenshot-3817.png</h3>
+                                    <p class="text-[#989898] font-medium">PNG 4mb</p>
+                                </div>
                             </div>
+                            <img src="./images/img4/down.png" alt="" class="w-9 h-9">
                         </div>
-                        <img src="./images/img4/down.png" alt="" class="w-9 h-9">
-                    </div>
-                    <!-- members4 -->
-                    <div class="flex flex-row justify-between items-center">
-                        <div class="flex flex-row gap-5 pl-3 py-5">
-                            <img src="./images/img4/file4.png" alt="" class="w-14">
-                            <div class="flex flex-col">
-                                <h3 class="text-xl font-semibold">Jerry-2020_l-9_Form.xxl</h3>
-                                <p class="text-[#989898] font-medium">XXL 24mb</p>
+                        <!-- members3 -->
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-row gap-5 pl-3 py-5">
+                                <img src="./images/img4/file3.png" alt="" class="w-14">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-semibold">sharefile.docx</h3>
+                                    <p class="text-[#989898] font-medium">DOC 555kb</p>
+                                </div>
                             </div>
+                            <img src="./images/img4/down.png" alt="" class="w-9 h-9">
                         </div>
-                        <img src="./images/img4/down.png" alt="" class="w-9 h-9">
+                        <!-- members4 -->
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-row gap-5 pl-3 py-5">
+                                <img src="./images/img4/file4.png" alt="" class="w-14">
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-semibold">Jerry-2020_l-9_Form.xxl</h3>
+                                    <p class="text-[#989898] font-medium">XXL 24mb</p>
+                                </div>
+                            </div>
+                            <img src="./images/img4/down.png" alt="" class="w-9 h-9">
+                        </div>
                     </div>
                 </div>
             </div>
