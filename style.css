@@ -1,3 +1,7 @@
 body {
     font-family: 'Inter', sans-serif;
-  }  
+  }
+.hide_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
